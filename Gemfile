@@ -51,6 +51,11 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop", ">= 1.0", "< 2.0"
+
+  # testing framework
+  gem 'database_cleaner-active_record', '~> 2.2'
+  gem 'rspec-rails', '~> 7.1'
+  gem 'factory_bot_rails', '~> 6.4', '>= 6.4.4'
 end
 
 group :development do
