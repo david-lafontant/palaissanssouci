@@ -53,6 +53,7 @@ group :development, :test do
   gem "rubocop", ">= 1.0", "< 2.0"
 
   # testing framework
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
   gem 'database_cleaner-active_record', '~> 2.2'
   gem 'rspec-rails', '~> 7.1'
   gem 'factory_bot_rails', '~> 6.4', '>= 6.4.4'
