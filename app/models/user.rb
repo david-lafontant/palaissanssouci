@@ -6,8 +6,7 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, :role, presence: true
   validates :first_name, :last_name, length: { in: 2..40 }
-  enum :role, [:visitor, :member, :admin, :sysadmin].freeze, default: :visitor, validate: true
-
+  enum :role, %i[visitor member admin sysadmin].freeze, default: :visitor, validate: true
 
   after_initialize :set_default_role, if: :new_record?
 
@@ -16,5 +15,4 @@ class User < ApplicationRecord
   def set_default_role
     self.role ||= :seller
   end
-
 end
