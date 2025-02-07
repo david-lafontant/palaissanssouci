@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 8.0.1'
+
+# manage environment variable
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1', :require => 'dotenv/rails-now'
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem 'propshaft'
 # Use postgresql as the database for Active Record
@@ -65,4 +68,3 @@ group :development do
 end
 
 gem 'devise', '~> 4.9', '>= 4.9.4'
-gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
