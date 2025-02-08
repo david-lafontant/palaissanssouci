@@ -11,37 +11,37 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+  <div  class="mb-3">
+    <%= form.label :title,class: "form-label" %>
+    <%= form.text_field :title , class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :slug, style: "display: block" %>
-    <%= form.text_field :slug %>
+  <div class="mb-3">
+    <%= form.label :slug,class: "form-label" %>
+    <%= form.text_field :slug , class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :content, style: "display: block" %>
-    <%= form.rich_textarea :content %>
+  <div class="mb-3">
+    <%= form.label :content,class: "form-label" %>
+    <%= form.rich_textarea :content, class: "form-control"  %>
   </div>
 
-  <div>
-    <%= form.label :poster, style: "display: block" %>
-    <%= form.file_field :poster %>
+  <div class="mb-3">
+    <%= form.label :poster,class: "form-label" %>
+    <%= form.file_field :poster , class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :poster_description, style: "display: block" %>
-    <%= form.text_field :poster_description %>
+  <div class="mb-3">
+    <%= form.label :poster_description,class: "form-label" %>
+    <%= form.text_field :poster_description , class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+  <div class="mb-3">
+    <%= form.label :user_id,class: "form-label" %>
+    <%= form.text_field :user_id , class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>

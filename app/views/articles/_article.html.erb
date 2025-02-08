@@ -1,28 +1,25 @@
-<div id="<%= dom_id article %>">
-  <p>
-    <strong>Title:</strong>
+<div  id="<%= dom_id article %>" class="w-100 mt-3 blog-article">
+ 
+
+  <h1>
     <%= article.title %>
-  </p>
-
-  <p>
-    <strong>Slug:</strong>
+  </h1>
+  <h2>
     <%= article.slug %>
-  </p>
+  </h2>
 
-  <p>
-    <strong>Content:</strong>
+  <% if article.poster.attached? %>
+    <figure class="mb-3">
+      <%= image_tag article.poster, class: "img-fluid" %>
+      <figcaption>
+        <%= article.poster_description %>
+      </figcaption>
+    </figure>
+  <%end%>
+  
+  <article>
     <%= article.content %>
-  </p>
-
-  <p>
-    <strong>Poster:</strong>
-    <%= link_to article.poster.filename, article.poster if article.poster.attached? %>
-  </p>
-
-  <p>
-    <strong>Poster description:</strong>
-    <%= article.poster_description %>
-  </p>
+  </article>
 
   <p>
     <strong>User:</strong>
