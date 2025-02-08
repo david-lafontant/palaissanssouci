@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "pages#index"
   get "about" => "pages#about", as: :about
   get "contact" => "pages#contact", as: :contact
+  get "boutique" => "pages#boutique", as: :boutique
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
