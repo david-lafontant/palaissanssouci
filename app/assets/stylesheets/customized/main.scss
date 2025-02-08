@@ -1,9 +1,11 @@
 @import './colors.scss';
+
 html,
 body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
+
 body {
-    background-color: $color-001;
-    padding-top: 56px;
+  background-color: $color-001;
+  padding-top: 56px;
 }

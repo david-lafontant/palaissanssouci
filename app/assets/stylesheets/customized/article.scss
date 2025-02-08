@@ -1,34 +1,31 @@
 @import './fonts.scss';
 @import './colors.scss';
 
-.blog-article{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 56px;
+.blog-article {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 56px;
 
-    h1{
-        font-family: "Merriweather", serif;
-        color:$color-004;
-    }
+  h1 {
+    font-family: "Merriweather", serif;
+    color: $color-004;
+  }
 
-    figure {
-        border: thin $color-002 solid;
-        padding: 4px;
-        margin: auto;
-      }
-      
-      figcaption {
-        background-color: rgb(22, 22, 22);
-        color: white;
-        font-style: italic;
-        padding: 2px;
-        text-align: center;
-      }
+  figure {
+    border: thin $color-002 solid;
+    padding: 4px;
+    margin: auto;
+  }
 
+  figcaption {
+    background-color: rgb(22, 22, 22);
+    color: white;
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+  }
 
-
-
-    article{
-        font-family: "Montserrat", serif;
-        font-optical-sizing: auto;
-    }
+  article {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+  }
 }
