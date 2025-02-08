@@ -8,6 +8,7 @@ RSpec.describe 'Pages', type: :request do
       expect(response).to render_template(:index)
       expect(response).to_not render_template(:about)
       expect(response).to_not render_template(:contact)
+      expect(response).to_not render_template(:boutique)
     end
   end
 
@@ -18,6 +19,7 @@ RSpec.describe 'Pages', type: :request do
       expect(response).to render_template(:about)
       expect(response).to_not render_template(:index)
       expect(response).to_not render_template(:contact)
+      expect(response).to_not render_template(:boutique)
     end
   end
 
@@ -28,6 +30,18 @@ RSpec.describe 'Pages', type: :request do
       expect(response).to render_template(:contact)
       expect(response).to_not render_template(:about)
       expect(response).to_not render_template(:index)
+      expect(response).to_not render_template(:boutique)
+    end
+  end
+
+  describe 'GET /boutique' do
+    it 'returns http success' do
+      get '/boutique'
+      expect(response).to have_http_status(:success)
+      expect(response).to render_template(:boutique)
+      expect(response).to_not render_template(:about)
+      expect(response).to_not render_template(:index)
+      expect(response).to_not render_template(:contact)
     end
   end
 end
