@@ -1,0 +1,16 @@
+
+
+<% content_for :title, "Categories" %>
+<div class="row">
+<div class="col d-md-flex justify-content-md-between py-2">
+<h1>Categories</h1>
+<%= link_to "New category", new_category_path, class: "btn btn-primary" %>
+</div>
+</div>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+<div id="categories">
+  <% @categories.each do |category| %>
+    <%= render category %>
+  <% end %>
+</div>
+</div>
