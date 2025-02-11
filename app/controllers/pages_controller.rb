@@ -5,5 +5,7 @@ class PagesController < ApplicationController
 
   def contact; end
 
-  def boutique; end
+  def boutique
+    @merchandises = Category.includes(:products).all
+  end
 end
