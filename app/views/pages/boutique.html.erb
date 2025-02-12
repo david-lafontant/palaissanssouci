@@ -1,5 +1,19 @@
-
-
 <% content_for :title, "Boutique" %>
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/boutique.html.erb</p>
+# With Russian Doll Caching
+<div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+  <% cache @merchandises do %>
+    <% @merchandises.each do |merchandise| %>
+      <% cache merchandise do %>
+        <h2><%= merchandise.name %></h2>
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3 mb-3">
+          <% merchandise.products.each do |product| %>
+            <%= render "pages/product", product: product %>
+          <% end %>
+        </div>
+        <div>
+          <button class="btn btn-primary" type="button"><i class="bi bi-plus"></i>&nbsp;More&nbsp;<%= merchandise.name %></button>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
