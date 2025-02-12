@@ -5,5 +5,13 @@ class PagesController < ApplicationController
 
   def contact; end
 
-  def boutique; end
+  def boutique
+    @merchandises = Category.includes(:products).all
+  end
+
+  def department
+    # get category as param fom url and find all the products that belong to the category
+    category = params[:id]
+    @products = Product.where(category_id: category)
+  end
 end

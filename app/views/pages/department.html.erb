@@ -1,0 +1,11 @@
+<% content_for :title, "Merchandises" %>
+<% cache @products do %>
+  <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3 mb-3">
+    <% @products.each do |product| %>
+      <% cache product do %>
+        <%= render "pages/product", product: product %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
+</div>

@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-  resources :products
-  resources :categories
-  resources :articles
+
  
   root "pages#index"
   get "about" => "pages#about", as: :about
   get "contact" => "pages#contact", as: :contact
   get "boutique" => "pages#boutique", as: :boutique
+  get "department/:id" => "pages#department", as: :department
+  resources :products
+  resources :categories
+  resources :articles
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
