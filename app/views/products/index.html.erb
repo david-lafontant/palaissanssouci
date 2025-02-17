@@ -1,25 +1,25 @@
-
 <% content_for :title, "Products" %>
 <div id="products" class="row" >
   <div class="col">
-  <h1>Products</h1>
-  <% @products.each do |product| %>
-    <div class="card" style="width: 18rem;" id="pc#{dom_id product}">
-    <%= image_tag product.pictures[0], class: "card-img-top", alt: "#{product.name} card picture" %>
-    <div class="card-body">
-    <h5 class="card-title">    <%= product.name %></h5>
-    <p class="card-text">
-    <%=   truncate(product.description , length: 200) %>   
-    </p>
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item"><%= product.category_id %></li>
-        <li class="list-group-item"><%= product.price %></li>
-    </ul>
-    <div class="card-body">
-      <%= link_to "Show this product", product, class: "card-link" %>
-    </div>
-    </div>
-  <% end %>
-</div>
+    <h1>Products</h1>
+    <%= link_to "New product", new_product_path, class: "btn btn-primary"%>
+    <% @products.each do |product| %>
+      <div class="card" style="width: 18rem;" id="pc#{dom_id product}">
+        <%= image_tag product.pictures[0], class: "card-img-top", alt: "#{product.name} card picture" %>
+        <div class="card-body">
+          <h5 class="card-title">    <%= product.name %></h5>
+          <p class="card-text">
+            <%=   truncate(product.description , length: 200) %>
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><%= product.category_id %></li>
+          <li class="list-group-item"><%= product.price %></li>
+        </ul>
+        <div class="card-body">
+          <%= link_to "Show this product", product, class: "card-link" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
