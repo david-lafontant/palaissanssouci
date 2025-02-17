@@ -1,0 +1,21 @@
+.frame {
+    background-color: rgba(255, 251, 251, 0.089);
+    border: 60px solid;
+    // border-image-slice: 166 161 172 166;
+    // border-image-width: 40px 40px 40px 40px;
+    // border-image-outset: 0px 0px 0px 0px;
+    // border-image-repeat: stretch stretch;
+    // border-image-source: url(assets/images/frame_01.png);
+
+
+    border-image-slice: 248 246 276 256;
+    border-image-width: 60px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+
+
+  }
+
+  .frame-01{
+    border-image-source: url(frame_01.png);
+  }
