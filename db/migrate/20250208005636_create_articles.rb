@@ -1,5 +1,5 @@
 class CreateArticles < ActiveRecord::Migration[8.0]
-  def change
+  def up
     create_table :articles do |t|
       t.string :title
       t.string :slug
@@ -8,5 +8,9 @@ class CreateArticles < ActiveRecord::Migration[8.0]
 
       t.timestamps
     end
+  end
+
+  def down
+    remove_table :articles
   end
 end
