@@ -1,15 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe "carts/index", type: :view do
+RSpec.describe 'carts/index', type: :view do
   before(:each) do
     assign(:carts, [
-      Cart.create!(),
-      Cart.create!()
-    ])
+             Cart.create!,
+             Cart.create!
+           ])
   end
 
-  it "renders a list of carts" do
+  it 'renders a list of carts' do
     render
-    cell_selector = 'div>p'
+    'div>p'
   end
 end
