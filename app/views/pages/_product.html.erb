@@ -6,7 +6,12 @@
     <div class="card-body">
       <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary"> <%= product.name %></span> <span class="float-end price-hp"> <%= number_to_currency(product.price) %></span> </div>
       <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
-      <div class="text-center my-4"> <a href="#" class="btn btn-warning">Add to cart</a> </div>
+      <div class="text-center my-4">
+        <%= form_with url: "/line_items", method: :post, class: "d-flex px-3" do |form| %>
+          <%= form.hidden_field :product_id, value: product.id %>
+          <%= form.number_field :quantity , min: 1, class: "form-control" %>
+          <%= form.submit "Add to cart",  form_class: 'inline', class: "btn btn-warning" %>
+        <% end %></div>
     </div>
   </div>
 </div>

@@ -1,17 +1,28 @@
-<div 
+<%# <div 
 class="px-4 py-1 mb-5 text-center parallax"
-style="background-image: url(<%= image_path "palais-sans-souci-01.png"%>);"
->
-  <%= image_tag "armoirie-royale-bg-transparent.png",  class: "d-block mx-auto mb-4 border border-rounded border-warning", size: "72x57", alt: "armoirie du Roi Henri 1" %>
-  <h1 class="display-5 fw-bold text-body-emphasis text-warning">Palais Sans Souci</h1>
+style="background-image: url(<%= image_path "palais-sans-souci-01.png"%>);">
+<%#= image_tag "armoirie-royale-bg-transparent.png",  class: "d-block mx-auto mb-4 border border-rounded border-warning", size: "72x57", alt: "armoirie du Roi Henri 1" %>
+<%# <h1 class="display-5 fw-bold text-body-emphasis text-warning">Palais Sans Souci</h1>
   <div class="col-lg-6 mx-auto">
     <p class="lead mb-4 text-warning">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aliquam quasi fugit voluptate iste optio, hic, deleniti quam atque corrupti quibusdam corporis dolorem quos quae expedita maxime enim, voluptatem unde?
     </p>
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      <button type="button" class="btn btn-warning btn-lg px-4 gap-3">Primary button</button>
-      <button type="button" class="btn btn-outline-warning btn-lg px-4">Secondary</button>
+      <button type="button" class="btn btn-success btn-lg px-4 gap-3">Palais Sans Souci</button>
+      <button type="button" class="btn btn-outline-warning btn-lg px-4">A propos</button>
+      <button type="button" class="btn btn-outline-primary btn-lg px-4">Sans Souci Postdam</button>
     </div>
+  </div> %>
+<%# </div> %>
+<div class="container-fluid my-5 p-5">
+  <%= image_tag "palais-sans-souci-01.png",
+       class: "img-fluid frame frame-01"
+
+      %>
+  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    <button type="button" class="btn btn-success btn-lg px-4 gap-3 img-fluid frame frame-01">Palais Sans Souci</button>
+    <button type="button" class="btn btn-outline-warning btn-lg px-4 img-fluid frame frame-01">A propos</button>
+    <button type="button" class="btn btn-outline-primary btn-lg px-4 img-fluid frame frame-01">Sans Souci Postdam</button>
   </div>
 </div>
 <div class="container my-5">
@@ -24,7 +35,7 @@ style="background-image: url(<%= image_path "palais-sans-souci-01.png"%>);"
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed consequatur ducimus et quod cumque deserunt vero. Velit, optio assumenda sit vel expedita alias incidunt ducimus neque tenetur, deleniti illum eum?
     </p>
     <button class="btn btn-warning px-5 mb-5" type="button">
-      Call to action
+      Histoire du chateau
     </button>
   </div>
 </div>
