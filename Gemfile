@@ -35,7 +35,7 @@ gem 'solid_cache'
 gem 'solid_queue'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', require: false
+gem 'bootsnap'
 
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
 gem 'kamal', require: false
@@ -69,7 +69,7 @@ group :development do
 end
 
 gem 'aws-sdk-ec2', '~> 1.506'
-gem 'aws-sdk-s3', '~> 1.182', require: false
+gem 'aws-sdk-s3', '~> 1.182'
 gem 'devise', '~> 4.9', '>= 4.9.4'
 gem 'jquery-turbolinks'
 gem 'stringio', '~> 3.1.2'
