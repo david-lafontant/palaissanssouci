@@ -26,9 +26,6 @@ class LineItemsController < ApplicationController
     @line_item = @cart.add_product(product, quantity)
     respond_to do |format|
       if @line_item.save
-        # format.html { redirect_to @line_item, notice: 'Line item was successfully created.' }
-
-        # format.html { redirect_to cart_url(@line_item.cart), notice: 'Line item was successfully created.' }
         format.html { redirect_to boutique_url, notice: "#{@line_item.product.name} was added to cart." }
         format.json { render :show, status: :created, location: @line_item }
       else
