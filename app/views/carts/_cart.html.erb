@@ -6,6 +6,7 @@
       <th scope="col"> Price </th>
       <th scope="col"> Quantity </th>
       <th scope="col"> Total </th>
+      <th scope="col"></th>
     </thead>
     <% cart.line_items.each do |item| %>
       <tr>
@@ -13,10 +14,11 @@
         <td> <%= number_to_currency(item.product_price) %> </td>
         <td> <%= item.quantity %> </td>
         <td> <%= number_to_currency(item.subtotal) %> </td>
+        <td> <%= button_to "Destroy this line item", item, method: :delete %></td>
       </tr>
     <% end %>
     <tr>
-      <td colspan="3" class="fw-bold">Total</td>
+      <td colspan="4" class="fw-bold">Total</td>
       <td class="fw-bold text-success"><%= number_to_currency(cart. total_price ) %></td>
     </tr>
   </table>
