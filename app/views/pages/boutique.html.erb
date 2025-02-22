@@ -1,21 +1,27 @@
 <% content_for :title, "Boutique" %>
-# Russian Doll Caching
 <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
-  <% cache @merchandises do %>
-    <% @merchandises.each do |merchandise| %>
-      <% cache merchandise do %>
-        <h2 >
-          <%= link_to "#{merchandise.name}", department_path(merchandise), class: "text-decoration-none soft-red-text" %>
-        </h2>
-        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3 mb-3">
-          <% merchandise.products.each do |product| %>
-            <%= render "pages/product", product: product %>
+  <div class="row">
+    <div class="col">
+      <%= render "pages/cart", cart: @cart %>
+    </div>
+    <div class="col">
+      <% cache @merchandises do %>
+        <% @merchandises.each do |merchandise| %>
+          <% cache merchandise do %>
+            <h2 >
+              <%= link_to "#{merchandise.name}", department_path(merchandise), class: "text-decoration-none soft-red-text" %>
+            </h2>
+            <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3 mb-3">
+              <% merchandise.products.each do |product| %>
+                <%= render "pages/product", product: product %>
+              <% end %>
+            </div>
+            <div>
+              <%= link_to "more #{merchandise.name}", department_path(merchandise), class: "btn btn-primary" %>
+            </div>
           <% end %>
-        </div>
-        <div>
-          <%= link_to "more #{merchandise.name}", department_path(merchandise), class: "btn btn-primary" %>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
-  <% end %>
+    </div>
+  </div>
 </div>
