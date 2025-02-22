@@ -2,7 +2,7 @@
 <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
   <div class="row">
     <div class="col">
-      <% if @cart.line_items.count > 0 %>
+      <% if @cart and not @cart. line_items . empty? %>
         <%= render "pages/cart", cart: @cart %>
       <%else%>
         <h1> Your cart is empty<br/>
