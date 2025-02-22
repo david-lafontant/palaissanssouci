@@ -2,7 +2,12 @@
 <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
   <div class="row">
     <div class="col">
-      <%= render "pages/cart", cart: @cart %>
+      <% if @cart.line_items.count > 0 %>
+        <%= render "pages/cart", cart: @cart %>
+      <%else%>
+        <h1> Your cart is empty<br/>
+          Please choose a souvenirs</h1>
+      <%end%>
     </div>
     <div class="col">
       <% cache @merchandises do %>
