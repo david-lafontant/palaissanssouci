@@ -7,8 +7,8 @@ class Cart < ApplicationRecord
     price = Product.find(product.id).price
     subtotal = price * quantity.to_i
     if current_item
-      current_item.quantity += quantity.to_i
-      current_item.subtotal += subtotal
+      current_item.quantity = quantity.to_i
+      current_item.subtotal = subtotal
     else
       current_item = line_items.build(product_id: product.id, product_price: price, quantity: quantity,
                                       subtotal: subtotal)
