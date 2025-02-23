@@ -16,4 +16,8 @@ class PagesController < ApplicationController
     category = params[:id]
     @products = Product.where(category_id: category)
   end
+
+  def details
+    @product = Product.find(params.expect(:id))
+  end
 end
