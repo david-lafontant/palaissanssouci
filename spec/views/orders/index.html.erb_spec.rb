@@ -37,17 +37,17 @@ RSpec.describe 'orders/index', type: :view do
   it 'renders a list of orders' do
     render
     cell_selector = 'div>p'
-    assert_select cell_selector, text: Regexp.new('First Name'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new('Last Name'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new('Address Line1'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new('Address Line2'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new('City'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new('State'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new('Country'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new('Zipcode'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new('Telephone'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new('MyText'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new(2.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new('Email'.to_s), count: 2
+    assert_select cell_selector, text: Regexp.new('First Name'), count: 2
+    assert_select cell_selector, text: Regexp.new('Last Name'), count: 2
+    assert_select cell_selector, text: Regexp.new('Address Line1'), count: 2
+    assert_select cell_selector, text: Regexp.new('Address Line2'), count: 2
+    assert_select cell_selector, text: Regexp.new('City'), count: 2
+    assert_select cell_selector, text: Regexp.new('State'), count: 2
+    assert_select cell_selector, text: Regexp.new('Country'), count: 2
+    assert_select cell_selector, text: Regexp.new('Zipcode'), count: 2
+    assert_select cell_selector, text: Regexp.new('Telephone'), count: 2
+    assert_select cell_selector, text: Regexp.new('MyText'), count: 2
+    assert_select cell_selector, text: Regexp.new(2), count: 2
+    assert_select cell_selector, text: Regexp.new('Email'), count: 2
   end
 end
