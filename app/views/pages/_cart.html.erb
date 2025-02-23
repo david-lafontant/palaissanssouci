@@ -18,7 +18,7 @@
           <div class="text-center my-4">
             <%= form_with url: "/line_items", method: :post, class: "d-flex px-3" do |form| %>
               <%= form.hidden_field :product_id, value: item.product.id %>
-              <%= form.number_field :quantity , min: 1, class: "form-control" %>
+              <%= form.number_field :quantity , value: item.quantity, min: 1, class: "form-control" %>
               <%= form.submit "Update",  form_class: 'inline', class: "btn btn-warning" %>
             <% end %></div>
         </td>
