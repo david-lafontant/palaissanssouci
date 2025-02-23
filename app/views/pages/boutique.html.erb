@@ -1,6 +1,11 @@
 <% content_for :title, "Boutique" %>
-# Russian Doll Caching
 <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+  <% if @cart and not @cart.line_items.empty? %>
+    <%= render "pages/offcanvas_cart", cart: @cart %>
+  <%else%>
+    <h1> Your cart is empty<br/>
+      Please choose a souvenirs</h1>
+  <%end%>
   <% cache @merchandises do %>
     <% @merchandises.each do |merchandise| %>
       <% cache merchandise do %>

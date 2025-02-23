@@ -26,9 +26,7 @@ class LineItemsController < ApplicationController
     @line_item = @cart.add_product(product, quantity)
     respond_to do |format|
       if @line_item.save
-        # format.html { redirect_to @line_item, notice: 'Line item was successfully created.' }
-
-        format.html { redirect_to cart_url(@line_item.cart), notice: 'Line item was successfully created.' }
+        format.html { redirect_to boutique_url, notice: "#{@line_item.product.name} was added to cart." }
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -52,10 +50,11 @@ class LineItemsController < ApplicationController
 
   # DELETE /line_items/1 or /line_items/1.json
   def destroy
+    product = @line_item.product.name
     @line_item.destroy!
 
     respond_to do |format|
-      format.html { redirect_to line_items_path, status: :see_other, notice: 'Line item was successfully destroyed.' }
+      format.html { redirect_to boutique_url, status: :see_other, notice: "#{product} was removed from cart." }
       format.json { head :no_content }
     end
   end

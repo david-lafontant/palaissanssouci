@@ -2,7 +2,8 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <%= image_tag "armoirie-royale-bg-transparent.png", size: "72x57", alt: "armoirie du Roi Henri 1" %>
-      <span class="text-warning">Palais Sans Souci<span></a>
+      <span class="text-warning">Palais Sans Souci<span>
+        </a>
         <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,8 +51,16 @@
                   <li><%= link_to 'Log In', new_user_session_path %></li>
                   <li><%= link_to 'Sign Up', new_user_registration_path %></li>
                 </ul>
-              <% end %>
-            </ul>
-          </div>
+              </li>
+            <% end %>
+          </ul>
+          <button class="btn btn-primary" 
+      type="button" 
+      data-bs-toggle="offcanvas" 
+      data-bs-target="#offcanvasWithBothOptions" 
+      aria-controls="offcanvasWithBothOptions">
+            Cart
+          </button>
         </div>
-      </nav>
+      </div>
+    </nav>

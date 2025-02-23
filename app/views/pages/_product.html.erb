@@ -1,6 +1,6 @@
 <div class="col" id="shop_<%=product.name%>">
   <div class="card h-100 shadow-sm">
-    <%= link_to product do%>
+    <%= link_to details_url(product) do%>
       <%= image_tag product.pictures[0],  class: "card-img-top", alt: "product #{product.name }" %>
     <%end%>
     <div class="card-body">

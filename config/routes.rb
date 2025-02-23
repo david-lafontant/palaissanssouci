@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   resources :line_items
   resources :carts
 
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   get "contact" => "pages#contact", as: :contact
   get "boutique" => "pages#boutique", as: :boutique
   get "department/:id" => "pages#department", as: :department
+  get "details/:id" => "pages#details", as: :details
   resources :products
   resources :categories
   resources :articles
