@@ -1,0 +1,12 @@
+
+<div class="col" id="<%= dom_id category %>">
+<div class="card">
+<%if category.picture.attached? %>
+  <%= image_tag category.picture , class: "card-img-top", alt: category.name %>
+<% end %>
+  <div class="card-body">
+    <h5 class="card-title">   <%= category.name %></h5>
+    <p> <%= link_to "Show this category", category_path(category), class: "btn btn-primary" %>
+  </div>
+</div>
+</div>
