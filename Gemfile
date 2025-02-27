@@ -66,7 +66,7 @@ group :development do
   gem 'web-console'
 end
 
-gem 'aws-sdk-ec2', '~> 1.506'
+gem 'aws-sdk-ec2', '~> 1.508'
 gem 'aws-sdk-s3', '~> 1.182'
 gem 'devise', '~> 4.9', '>= 4.9.4'
 gem 'jquery-turbolinks'
