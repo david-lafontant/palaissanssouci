@@ -67,6 +67,10 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 end
-
+gem 'active_storage_validations', '~> 2.0', '>= 2.0.2'
+gem 'bootstrap5-kaminari-views', '~> 0.0.1'
+gem 'cancancan', '~> 3.6', '>= 3.6.1'
 gem 'devise', '~> 4.9', '>= 4.9.4'
 gem 'jquery-turbolinks'
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
+gem 'stringio', '~> 3.1', '>= 3.1.5'
