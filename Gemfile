@@ -66,8 +66,10 @@ group :development do
   gem 'web-console'
 end
 
-gem 'aws-sdk-ec2', '~> 1.506'
-gem 'aws-sdk-s3', '~> 1.182'
+gem 'active_storage_validations', '~> 2.0', '>= 2.0.2'
+gem 'bootstrap5-kaminari-views', '~> 0.0.1'
+gem 'cancancan', '~> 3.6', '>= 3.6.1'
 gem 'devise', '~> 4.9', '>= 4.9.4'
 gem 'jquery-turbolinks'
-gem 'stringio', '~> 3.1.2'
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
+gem 'stringio', '~> 3.1', '>= 3.1.5'

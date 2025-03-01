@@ -44,6 +44,12 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
+    active_storage_validations (2.0.2)
+      activejob (>= 6.1.4)
+      activemodel (>= 6.1.4)
+      activestorage (>= 6.1.4)
+      activesupport (>= 6.1.4)
+      marcel (>= 1.0.3)
     activejob (8.0.1)
       activesupport (= 8.0.1)
       globalid (>= 0.3.6)
@@ -103,9 +109,13 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
+    bootstrap5-kaminari-views (0.0.1)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     brakeman (7.0.0)
       racc
     builder (3.3.0)
+    cancancan (3.6.1)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.0)
     crass (1.0.6)
@@ -183,6 +193,18 @@ GEM
       sshkit (>= 1.23.0, < 2.0)
       thor (~> 1.2)
       zeitwerk (~> 2.5)
+    kaminari (1.2.2)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.2)
+      kaminari-activerecord (= 1.2.2)
+      kaminari-core (= 1.2.2)
+    kaminari-actionview (1.2.2)
+      actionview
+      kaminari-core (= 1.2.2)
+    kaminari-activerecord (1.2.2)
+      activerecord
+      kaminari-core (= 1.2.2)
+    kaminari-core (1.2.2)
     language_server-protocol (3.17.0.4)
     logger (1.6.5)
     loofah (2.24.0)
@@ -360,7 +382,7 @@ GEM
       ostruct
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
-    stringio (3.1.2)
+    stringio (3.1.5)
     thor (1.3.2)
     thruster (0.1.10)
     thruster (0.1.10-aarch64-linux)
@@ -407,10 +429,12 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  aws-sdk-ec2 (~> 1.506)
-  aws-sdk-s3 (~> 1.182)
+
+  active_storage_validations (~> 2.0, >= 2.0.2)
   bootsnap
+  bootstrap5-kaminari-views (~> 0.0.1)
   brakeman
+  cancancan (~> 3.6, >= 3.6.1)
   cssbundling-rails
   database_cleaner-active_record (~> 2.2)
   debug
@@ -421,6 +445,7 @@ DEPENDENCIES
   jbuilder
   jquery-turbolinks
   kamal
+  kaminari (~> 1.2, >= 1.2.2)
   pg (~> 1.1)
   propshaft
   puma (>= 5.0)
@@ -432,7 +457,7 @@ DEPENDENCIES
   solid_cache
   solid_queue
   stimulus-rails
-  stringio (~> 3.1.2)
+  stringio (~> 3.1, >= 3.1.5)
   thruster
   turbo-rails
   tzinfo-data
