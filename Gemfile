@@ -4,8 +4,6 @@ ruby file: '.ruby-version'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 8.0.1'
 
-# manage environment variable
-gem 'dotenv-rails', '~> 2.1', '>= 2.1.1', require: 'dotenv/rails-now'
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem 'propshaft'
 # Use postgresql as the database for Active Record
@@ -35,7 +33,7 @@ gem 'solid_cache'
 gem 'solid_queue'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', require: false
+gem 'bootsnap'
 
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
 gem 'kamal', require: false
@@ -67,6 +65,7 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 end
+
 gem 'active_storage_validations', '~> 2.0', '>= 2.0.2'
 gem 'bootstrap5-kaminari-views', '~> 0.0.1'
 gem 'cancancan', '~> 3.6', '>= 3.6.1'
