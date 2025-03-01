@@ -13,7 +13,7 @@ class Order < ApplicationRecord
             format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, message: 'Invalid format' }
 
   validates :telephone,
-            format: { with: /([0-9\s\-]{7,})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?\z/,
+            format: { with: /\A([0-9\s\-]{7,})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?\z/,
                       message: 'Invalid format' }
   validates :zipcode,
             format: { with: /\A\d{4,5}(?:[-\s]\d{4})?\z/, message: 'Invalid format' }
