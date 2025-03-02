@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  skip_authorization_check
   include CurrentCart
   before_action :set_cart
   def index; end
@@ -19,5 +20,13 @@ class PagesController < ApplicationController
 
   def details
     @product = Product.find(params.expect(:id))
+  end
+
+  def blogs
+    @articles = Article.all
+  end
+
+  def blog
+    @article = Article.find(params.expect(:id))
   end
 end

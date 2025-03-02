@@ -1,19 +1,20 @@
 Rails.application.routes.draw do
-  resources :orders
-  resources :line_items
-  resources :carts
-
- 
+  
   root "pages#index"
   get "about" => "pages#about", as: :about
   get "contact" => "pages#contact", as: :contact
   get "boutique" => "pages#boutique", as: :boutique
   get "department/:id" => "pages#department", as: :department
   get "details/:id" => "pages#details", as: :details
+  get "blog" => "pages#blogs", as: :blogs
+  get "blog/:id" => "pages#blog", as: :a_blog
   resources :products
   resources :categories
   resources :articles
   devise_for :users
+  resources :orders
+  resources :line_items
+  resources :carts
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

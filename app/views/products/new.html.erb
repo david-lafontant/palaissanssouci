@@ -1,11 +1,9 @@
 <% content_for :title, "New product" %>
-
 <h1>New product</h1>
-
-<%= render "form", product: @product %>
-
-<br>
-
-<div>
-  <%= link_to "Back to products", products_path, class: "btn btn-primary" %>
-</div>
+<% if user_signed_in? %>
+  <%= render "form", product: @product %>
+  <br>
+  <div>
+    <%= link_to "Back to products", products_path, class: "btn btn-primary" %>
+  </div>
+<%end%>
