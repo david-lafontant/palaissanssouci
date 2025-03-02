@@ -5,7 +5,7 @@ class Order < ApplicationRecord
 
   validates :first_name, :last_name, :address_line1, :city, :state, :country, :zipcode, :telephone,
             :payment_method, :email, presence: true
-  validates :address_line2, :intruction, allow_nil: true
+  validates :address_line2, :intruction, length: { in: 2..140 }, allow_nil: true
   validates :first_name, :last_name, :city, :state, :country, length: { in: 2..40 }
   validates :address_line1, :address_line2, length: { in: 10..80 }
 
