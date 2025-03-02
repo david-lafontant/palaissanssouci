@@ -1,14 +1,13 @@
 <% content_for :title, "New category" %>
 <div class="row">
-<div class="col col-md-7 ms-auto">
-<h1>New category</h1>
-
-<%= render "form", category: @category %>
-
-<br>
-
-<div>
-  <%= link_to "Back to categories", categories_path , class: "btn btn-success" %>
-</div>
-</div>
+  <div class="col col-md-7 ms-auto">
+    <h1>New category</h1>
+    <% if user_signed_in? %>
+      <%= render "form", category: @category %>
+      <br>
+      <div>
+        <%= link_to "Back to categories", categories_path , class: "btn btn-success" %>
+      </div>
+    <%end%>
+  </div>
 </div>
