@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "boutique" => "pages#boutique", as: :boutique
   get "department/:id" => "pages#department", as: :department
   get "details/:id" => "pages#details", as: :details
+  get "blog" => "pages#blogs", as: :blogs
+  get "blog/:id" => "pages#blog", as: :a_blog
   resources :products
   resources :categories
   resources :articles

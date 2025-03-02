@@ -21,4 +21,12 @@ class PagesController < ApplicationController
   def details
     @product = Product.find(params.expect(:id))
   end
+
+  def blogs
+    @articles = Article.all
+  end
+
+  def blog
+    @article = Article.find(params.expect(:id))
+  end
 end

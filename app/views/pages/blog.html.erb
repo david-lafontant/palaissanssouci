@@ -1,0 +1,17 @@
+<h1>
+  <%= @article.title %>
+</h1>
+<h2>
+  <%= @article.slug %>
+</h2>
+<% if @article.poster.attached? %>
+  <figure class="mb-3">
+    <%= image_tag @article.poster, class: "img-fluid" %>
+    <figcaption>
+      <%= @article.poster_description %>
+    </figcaption>
+  </figure>
+<%end%>
+<article>
+  <%= @article.content %>
+</article>
