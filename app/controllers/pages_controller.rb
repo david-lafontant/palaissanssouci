@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   skip_authorization_check
-  include CurrentCart
+  # include CurrentCart
   before_action :set_cart
   def index; end
 
@@ -28,5 +28,14 @@ class PagesController < ApplicationController
 
   def blog
     @article = Article.find(params.expect(:id))
+  end
+
+  private
+
+  def set_cart
+    @cart = Cart.find(session[:cart_id])
+  rescue ActiveRecord::RecordNotFound
+    @cart = Cart.create
+    session[:cart_id] = @cart.id
   end
 end
