@@ -2,7 +2,9 @@
 <div id="products" class="row" >
   <div class="col">
     <h1>Products</h1>
-    <%= link_to "New product", new_product_path, class: "btn btn-primary"%>
+    <% if user_signed_in? %>
+      <%= link_to "New product", new_product_path, class: "btn btn-primary"%>
+    <%end%>
     <% @products.each do |product| %>
       <div class="card" style="width: 18rem;" id="pc#{dom_id product}">
         <%= image_tag product.pictures[0], class: "card-img-top", alt: "#{product.name} card picture" %>
@@ -16,9 +18,11 @@
           <li class="list-group-item"><%= product.category_id %></li>
           <li class="list-group-item"><%= product.price %></li>
         </ul>
-        <div class="card-body">
-          <%= link_to "Show this product", product, class: "card-link" %>
-        </div>
+        <% if user_signed_in? %>
+          <div class="card-body">
+            <%= link_to "Show this product", product, class: "card-link" %>
+          </div>
+        <%end%>
       </div>
     <% end %>
   </div>

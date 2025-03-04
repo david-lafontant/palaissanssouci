@@ -1,4 +1,5 @@
 class LineItemsController < ApplicationController
+  skip_authorization_check
   include CurrentCart
   before_action :set_cart, only: %i[create]
   before_action :set_line_item, only: %i[show edit update destroy]

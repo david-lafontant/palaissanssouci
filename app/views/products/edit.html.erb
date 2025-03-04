@@ -1,12 +1,10 @@
 <% content_for :title, "Editing product" %>
-
 <h1>Editing product</h1>
-
-<%= render "form", product: @product %>
-
-<br>
-
-<div>
-  <%= link_to "Show this product", @product, class: "btn btn-success" %> |
-  <%= link_to "Back to products", products_path, class: "btn btn-warning" %>
-</div>
+<% if user_signed_in? %>
+  <%= render "form", product: @product %>
+  <br>
+  <div>
+    <%= link_to "Show this product", @product, class: "btn btn-success" %> |
+    <%= link_to "Back to products", products_path, class: "btn btn-warning" %>
+  </div>
+<%end%>
