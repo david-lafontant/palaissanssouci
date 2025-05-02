@@ -69,7 +69,7 @@ end
 gem 'active_storage_validations', '~> 2.0', '>= 2.0.2'
 gem 'aws-sdk', '~> 3.2'
 gem 'aws-sdk-core', '~> 3.219'
-gem 'aws-sdk-s3', '~> 1.182'
+gem 'aws-sdk-s3', '~> 1.185'
 gem 'bootstrap5-kaminari-views', '~> 0.0.1'
 gem 'cancancan', '~> 3.6', '>= 3.6.1'
 gem 'devise', '~> 4.9', '>= 4.9.4'
